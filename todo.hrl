@@ -1,0 +1,1 @@
+-record(easy_todo,{title,value}).
