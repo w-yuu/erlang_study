@@ -1,0 +1,8 @@
+-module(todo).
+-export([title_clear/1]).
+-include("todo.hrl").
+	
+%%’¥¿’¥¤’¥È’¥ë’¤ò’¥¿’¥¤’¥È’¥ë’¤È’¥Ğ’¥ê’¥å’¡¼’¤ò’·ë’¹ç’¤·’¤¿’ÃÍ’¤Ë’¤¹’¤ë
+title_clear(#easy_todo{title = Title,value=Value} = R) ->
+R#easy_todo{title = string:concat(Title,Value)};
+title_clear(_)->false.
